@@ -36,18 +36,18 @@
     margin: (x: 3.17cm, y: 2.54cm),
 
     // // 页眉与该部分的章标题相同，宋体 10.5 磅（五号）居中。
-    header: locate(loc => {
+    header: context{
       let chapter_heading = none
-      let i = counter(page).at(loc).first()
-      let all = query(heading.where(level: 1), loc)
+      let i = counter(page).at(here()).first()
+      let all = query(heading.where(level: 1))
       if all.any(it => it.location().page() == i) {
         // We are on a page that starts a chapter
-        let after = query(selector(heading.where(level: 1)).after(loc), loc)
+        let after = query(selector(heading.where(level: 1)).after(here()))
         if after != () {
           chapter_heading = after.first().body
         }
       } else {
-        let before = query(selector(heading.where(level: 1)).before(loc), loc)
+        let before = query(selector(heading.where(level: 1)).before(here()))
         if before != () {
           chapter_heading = before.last().body
         }
@@ -55,7 +55,7 @@
       if chapter_heading != none {
         align(center, text(10.5pt, chapter_heading))
       }
-    }),
+    },
 
     // 页码：宋体 10.5 磅、页面下脚居中。
     // footer-descent: 12pt,
