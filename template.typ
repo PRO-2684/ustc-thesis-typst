@@ -10,16 +10,16 @@
 
   let serif_fonts = (
     "Times New Roman",
-    "TeX Gyre Termes",
+    // "TeX Gyre Termes",
     "SimSun",
-    "Songti SC",
+    // "Songti SC",
   )
 
   let sans_fonts = (
     "Arial",
-    "TeX Gyre Heros",
+    // "TeX Gyre Heros",
     "SimHei",
-    "Heiti SC",
+    // "Heiti SC",
   )
 
   // Set the body font.
