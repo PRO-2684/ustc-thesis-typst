@@ -7,7 +7,7 @@
 
 
 // #frontmatter()
-// #include("chapters/abstract.typ")
+#include("chapters/abstract.typ")
 #outline()
 // #listoffigures
 // #listoftables
@@ -22,8 +22,8 @@
 #bibliography("refs.bib")
 
 // #appendix()
-// #include("chapters/complementary.typ")
+#include("chapters/complementary.typ")
 
 // #backmatter()
-// #include("chapters/acknowledgements.typ")
-// #include("chapters/publications.typ")
+#include("chapters/acknowledgements.typ")
+#include("chapters/publications.typ")

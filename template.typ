@@ -112,7 +112,7 @@
   // 各章标题：黑体 16 磅加粗居中，单倍行距，段前 24 磅，段后 18 磅，章序号与章名间空一字。
   show heading: it => {
     if it.level == 1 {
-      pagebreak(weak: true)
+      colbreak(weak: true)
     }
 
     // Create the heading numbering.
